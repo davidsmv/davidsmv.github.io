@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>David Martínez</title>
 	<style>
-		body {
-			font-family: Arial, sans-serif;
+		* {
 			margin: 0;
 			padding: 0;
-			background-color: #f7f7f7;
+			box-sizing: border-box;
 		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			color: #333;
+		}
+
 		header {
-			background-color: #3f51b5;
+			background-color: #0072c6;
 			color: #fff;
 			padding: 20px;
 			text-align: center;
 		}
+
 		h1 {
-			margin-top: 0;
+			font-size: 2em;
+			margin: 0;
+			margin-bottom: 10px;
 		}
-		section {
+
+		h2 {
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+
+		.container {
 			max-width: 800px;
 			margin: auto;
 			padding: 20px;
@@ -28,18 +45,50 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
+
 		ul {
 			list-style: none;
 			margin: 0;
 			padding: 0;
 		}
+
 		li {
 			margin-bottom: 10px;
 		}
+
 		label {
 			display: block;
 			font-weight: bold;
 			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			margin-bottom: 10px;
+		}
+
+		textarea {
+			min-height: 150px;
+		}
+
+		button[type="submit"] {
+			background-color: #0072c6;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button[type="submit"]:hover {
+			background-color: #005ea6;
 		}
 	</style>
 </head>
@@ -47,7 +96,7 @@
 	<header>
 		<h1>David Martínez</h1>
 	</header>
-	<section>
+	<div class="container">
 		<h2>Sobre mí</h2>
 		<ul>
 			<li>Administrador de empresas con énfasis en finanzas y procesos de internacionalización</li>
@@ -58,23 +107,15 @@
 			<li>Conocimientos en SQL, Power BI, Tableau, Holistics, Web Scraping y Python</li>
 		</ul>
 		<h2>Contacto</h2>
-		<form action="mailto:david-martinezv@outlook.com.com" method="post" enctype="text/plain">
-			<div>
-				<label for="nombre">Nombre:</label>
-				<input type="text" id="nombre" name="nombre">
-			</div>
-			<div>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email">
-			</div>
-			<div>
-				<label for="mensaje">Mensaje:</label>
-				<textarea id="mensaje" name="mensaje"></textarea>
-			</div>
-			<div>
-				<button type="submit">Enviar</button>
-			</div>
-		</form>
-	</section>
-</body>
-</html>
+		<form action="mailto:david-martinezv@hotmail.com" method="post"
+		<label for="name">Nombre:</label>
+		<input type="text" id="name" name="name" required>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<label for="message">Mensaje:</label>
+		<textarea id="message" name="message" required></textarea>
+		<button type="submit">Enviar</button>
+</form>
+</div>
+
+		      		      		      
