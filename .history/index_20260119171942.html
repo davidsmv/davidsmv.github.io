@@ -36,7 +36,6 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="books.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -47,13 +46,29 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <div id="about-container">
-                        <p>Loading profile...</p>
-                    </div>
+                    <p>Hello there! My name is <strong>David Martinez</strong> and I am a business administrator with a focus on finance and internationalization processes.</p>
+                    <p>
+                        I have experience in purchasing, consultancy, and pricing data analysis. I consider myself an organized, creative, and committed person who is always eager to learn new things. 
+                        I strongly believe that technology is the key tool for the progress of our society.
+                    </p>
+                    <p>
+                        <strong>Skills:</strong> SQL, Power BI, Tableau, Holistics, Web Scraping, and Python. 
+                        Currently, I am expanding my knowledge in <strong>Machine Learning</strong>.
+                    </p>
+                    <p>
+                        <strong>Experience:</strong>
+                        <br>
+                        - <em>Business Intelligence Analyst</em> at <strong>Tul</strong> (Colombian startup): Handled ETL processes and market information tracking for Colombia, Brazil & Mexico.
+                        <br>
+                        - <em>Pricing Analyst</em> at <strong>Habi</strong> (Proptech): Responsible for real estate pricing models and data analysis.
+                    </p>
+                    <p>
+                        If you'd like to connect, feel free to reach out via <a href="https://www.linkedin.com/in/davidsmv" target="_blank" style="color: var(--accent-color);">LinkedIn</a>.
+                    </p>
                 </div>
                 <!-- Placeholder image - Replace 'profile-placeholder.jpg' with your actual photo file name -->
                 <div class="about-image">
-                    <img src="images/profile.jpg" alt="David Martínez" class="profile-pic" onerror="this.src='https://via.placeholder.com/250?text=Profile+Photo'">
+                    <img src="https://via.placeholder.com/250" alt="David Martínez" class="profile-pic">
                 </div>
             </div>
         </section>
@@ -61,9 +76,6 @@
         <!-- Projects Section -->
         <section id="projects">
             <h2>Featured Projects</h2>
-            <p style="text-align: center; margin-bottom: 20px;">
-                Explore more of my work on <a href="https://github.com/davidsmv" target="_blank" style="color: var(--accent-color); font-weight: bold;">GitHub <i class="fab fa-github"></i></a>
-            </p>
             <!-- Empty container for JavaScript to populate -->
             <div class="projects-grid" id="featured-projects">
                 <!-- Content will be loaded from scripts.js -->
@@ -76,7 +88,7 @@
         <!-- Blog Section -->
         <section id="blog">
             <h2>Latest From the Blog</h2>
-            <p style="text-align: center; margin-bottom: 20px;">I write about Data Science, technology, business, politics, and more.</p>
+            <p style="text-align: center; margin-bottom: 20px;">I write about data analysis, tech, and business.</p>
             <!-- Empty container for JavaScript to populate -->
             <div class="card-list" id="featured-blog">
                 <!-- Content will be loaded from scripts.js -->
@@ -100,23 +112,25 @@
     </div>
 
     <!-- Footer -->
-    <footer id="main-footer">
-        <!-- Footer content loaded from scripts.js -->
+    <footer>
+        <p>&copy; 2026 David Martínez. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/davidsmv" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/davidsmv" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:david-martinezv@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </p>
     </footer>
 
     <!-- Load Data and Render Scripts -->
     <script src="data/projects.js"></script>
     <script src="data/blogs.js"></script>
     <script src="data/books.js"></script>
-    <script src="data/contact.js"></script>
     <script src="js/scripts.js"></script>
     <script>
         // Render sections with limits for the home page
-        loadProfile('about-container');         // Load profile from markdown
         renderProjects('featured-projects', 2); // Show top 2 projects
         renderBlogs('featured-blog', 1);        // Show top 1 blog post
         renderBooks('featured-books', 1);       // Show top 1 book
-        renderFooter('main-footer');            // Render footer
     </script>
 </body>
 </html>
