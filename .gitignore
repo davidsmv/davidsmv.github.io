@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# VS Code / Editor Directories
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Local History Extension
+.history/
+
+# Node.js (in case you add it later, though not present now)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Temporary or Log Files
+*.log
+*.tmp
