@@ -42,27 +42,7 @@ nav {
   font-weight: bold;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
 
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--accent-color);
-}
 
 /* Sections */
 .container {
@@ -160,6 +140,8 @@ section h2 {
   transition: transform 0.3s ease;
 }
 
+
+
 .project-card:hover {
   transform: translateY(-5px);
 }
@@ -186,6 +168,12 @@ section h2 {
   font-weight: bold;
 }
 
+/* Ensure links/buttons in cards are centered */
+.project-link, .read-more-btn {
+  display: inline-block; 
+  margin: 10px auto;
+}
+
 /* Blog & Books (General Card Style) */
 .card-list {
   display: flex;
@@ -200,6 +188,13 @@ section h2 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+/* Center header content inside list items */
+.list-item > div {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -364,9 +359,6 @@ footer {
   
   .nav-links {
     margin-top: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 10px;
   }
 
   .nav-links li {

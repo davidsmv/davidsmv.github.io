@@ -45,8 +45,6 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-links li {
@@ -364,9 +362,6 @@ footer {
   
   .nav-links {
     margin-top: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 10px;
   }
 
   .nav-links li {

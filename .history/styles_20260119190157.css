@@ -366,7 +366,7 @@ footer {
     margin-top: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 10px;
+    gap: 10px; /* add gap for better spacing handling if it wraps */
   }
 
   .nav-links li {

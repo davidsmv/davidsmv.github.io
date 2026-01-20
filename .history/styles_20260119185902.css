@@ -42,27 +42,7 @@ nav {
   font-weight: bold;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
 
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--accent-color);
-}
 
 /* Sections */
 .container {
@@ -160,6 +140,8 @@ section h2 {
   transition: transform 0.3s ease;
 }
 
+
+
 .project-card:hover {
   transform: translateY(-5px);
 }
@@ -186,6 +168,8 @@ section h2 {
   font-weight: bold;
 }
 
+
+
 /* Blog & Books (General Card Style) */
 .card-list {
   display: flex;
@@ -202,6 +186,8 @@ section h2 {
   justify-content: space-between;
   align-items: center;
 }
+
+
 
 .list-item a {
   color: var(--accent-color);
@@ -364,17 +350,41 @@ footer {
   
   .nav-links {
     margin-top: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 10px;
+    flex-direction: row;      /* Force horizontal row */
+    flex-wrap: nowrap;        /* Do NOT wrap to next line */
+    justify-content: center;  /* Center the tabs together */
+    overflow-x: auto;         /* allow scroll if screen is too small */
+    padding-bottom: 5px;
+    width: 100%;
   }
 
   .nav-links li {
-    margin: 0 10px;
+    margin: 0 8px;            /* Consistent small spacing */
+    flex-shrink: 0;
+  }
+
+  /* Hide scrollbar for cleaner look */
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-links {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
   }
   
   .about-content {
     flex-direction: column-reverse;
     text-align: center;
+  }
+
+  /* Explicitly center headers on mobile, but keep Logo left-aligned if preferred, orcenter it only if requested. 
+     User said "titles of the pages". Let's center H1/H2 only. */
+  section h2, h1 {
+    text-align: center;
+    width: 100%;
   }
 }
