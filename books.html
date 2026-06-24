@@ -45,20 +45,195 @@
                 <a href="https://www.goodreads.com/review/list/112709167-david-mart-nez" target="_blank" style="color: var(--accent-color); font-weight: bold; margin-top: 10px; display: inline-block;">View all my reviews on Goodreads &rarr;</a>
             </p>
 
-            <div class="card-list" id="all-books">
-                <!-- Content will be loaded from scripts.js -->
+            <!-- Reading Challenge Widget -->
+            <style>
+                #gr_challenge_11680 {
+                    background: var(--card-bg) !important;
+                    border: none !important;
+                    border-radius: 8px !important;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+                    padding: 1.5rem !important;
+                    max-width: 450px !important;
+                    margin: 0 auto 2rem auto !important;
+                    min-height: auto !important;
+                }
+                #gr_challenge_11680,
+                #gr_challenge_11680 * {
+                    font-family: var(--font-main) !important;
+                    font-style: normal !important;
+                }
+                #gr_challenge_11680 h3 {
+                    text-align: center !important;
+                    font-weight: bold !important;
+                    font-size: 1.1rem !important;
+                    margin: 0 0 12px !important;
+                }
+                #gr_challenge_11680 a {
+                    color: var(--accent-color) !important;
+                    text-decoration: none !important;
+                }
+                #gr_challenge_11680 a:hover {
+                    text-decoration: underline !important;
+                }
+                #gr_challenge_11680 .challengePic {
+                    text-align: center !important;
+                    float: none !important;
+                    margin: 0 auto 10px auto !important;
+                    display: block !important;
+                }
+                #gr_challenge_11680 .challengePic img {
+                    border-radius: 6px !important;
+                    float: none !important;
+                }
+                #gr_challenge_11680 #gr_challenge_progress_body_11680 {
+                    font-size: 14px !important;
+                    line-height: 1.6 !important;
+                    text-align: center !important;
+                }
+                #gr_challenge_11680 #gr_challenge_progress_body_11680 > div {
+                    float: none !important;
+                    text-align: center !important;
+                }
+                #gr_challenge_11680 #gr_challenge_progress_body_11680 div[style*="border: 1px solid"] {
+                    width: 100% !important;
+                    margin: 8px auto !important;
+                    float: none !important;
+                    border-radius: 4px !important;
+                    border-color: #ddd !important;
+                    height: 10px !important;
+                    background-color: #f0f0f0 !important;
+                }
+                #gr_challenge_11680 #gr_challenge_progress_body_11680 div[style*="border: 1px solid"] div {
+                    background-color: var(--accent-color) !important;
+                    border-radius: 4px !important;
+                    height: 100% !important;
+                }
+                /* Hide Goodreads logo inside widget */
+                #gr_custom_widget_1782262178 img[src*="widget_logo"],
+                #gr_custom_widget_1782262178 center {
+                    display: none !important;
+                }
+            </style>
+            <div id="gr_challenge_11680" style="border: 2px solid #EBE8D5; border-radius:10px; padding: 0px 7px 0px 7px; max-width:230px; min-height: 100px">
+                <div id="gr_challenge_progress_body_11680" style="font-size: 12px; font-family: georgia,serif;line-height: 18px">
+                    <h3 style="margin: 4px 0 10px; font-weight: normal; text-align: center">
+                        <a style="text-decoration: none; font-family:georgia,serif;font-style:italic; font-size: 1.1em" rel="nofollow" href="https://www.goodreads.com/challenges/11680-2026-reading-challenge">2026 Reading Challenge</a>
+                    </h3>
+                    <div class="challengePic">
+                        <a rel="nofollow" href="https://www.goodreads.com/challenges/11680-2026-reading-challenge"><img alt="2026 Reading Challenge" style="float:left; margin-right: 10px; border: 0 none" src="https://images.gr-assets.com/challenges/1764710439p2/11680.jpg" /></a>
+                    </div>
+                    <div>
+                        <a rel="nofollow" href="https://www.goodreads.com/user/show/112709167-david-mart-nez">David</a> has read 0 books toward his goal of 4 books.
+                    </div>
+                    <div style="width: 100px; margin: 4px 5px 5px 0; float: left; border: 1px solid #382110; height: 8px; overflow: hidden; background-color: #FFF">
+                        <div style="width: 0%; background-color: #D7D2C4; float: left"><span style="visibility:hidden">hide</span></div>
+                    </div>
+                    <div style="font-family: arial, verdana, helvetica, sans-serif;font-size:90%">
+                        <a rel="nofollow" href="https://www.goodreads.com/user_challenges/69408486">0 of 4 (0%)</a>
+                    </div>
+                    <div style="text-align: right;">
+                        <a style="text-decoration: none; font-size: 10px;" rel="nofollow" href="https://www.goodreads.com/user_challenges/69408486">view books</a>
+                    </div>
+                </div>
+                <script src="https://www.goodreads.com/user_challenges/widget/112709167-david-mart-nez?challenge_id=11680&v=2"></script>
             </div>
+
+            <!-- Goodreads Custom Widget (auto-updates) -->
+            <style type="text/css" media="screen">
+                #gr_custom_widget_1782262178,
+                #gr_custom_widget_1782262178 * {
+                    font-family: var(--font-main) !important;
+                }
+                .gr_custom_container_1782262178 {
+                    border: 0px solid gray;
+                    border-radius: 10px;
+                    padding: 10px 5px 10px 5px;
+                    background-color: transparent;
+                    color: var(--text-color);
+                }
+                .gr_custom_header_1782262178 {
+                    display: none;
+                }
+                .gr_custom_each_container_1782262178 {
+                    width: 100%;
+                    clear: both;
+                    margin-bottom: 1.5rem;
+                    overflow: auto;
+                    padding: 1.5rem;
+                    background: var(--card-bg);
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                    border-bottom: none;
+                    box-sizing: border-box;
+                }
+                .gr_custom_book_container_1782262178 {
+                    overflow: hidden;
+                    height: 180px;
+                    float: left;
+                    margin-right: 1.2rem;
+                    width: 120px;
+                }
+                .gr_custom_book_container_1782262178 img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                }
+                .gr_custom_title_1782262178 {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    margin-bottom: 4px;
+                }
+                .gr_custom_author_1782262178 {
+                    font-size: 0.9rem;
+                    color: #666;
+                    margin-bottom: 8px;
+                }
+                .gr_custom_tags_1782262178 {
+                    font-size: 10px;
+                    color: gray;
+                }
+                .gr_custom_rating_1782262178 {
+                    float: right;
+                    margin-bottom: 6px;
+                }
+                .gr_custom_title_1782262178 a,
+                .gr_custom_author_1782262178 a {
+                    color: var(--accent-color);
+                    text-decoration: none;
+                }
+                .gr_custom_title_1782262178 a:hover,
+                .gr_custom_author_1782262178 a:hover {
+                    text-decoration: underline;
+                }
+                .gr_custom_review_1782262178 {
+                    margin-top: 10px;
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    color: var(--text-color);
+                }
+            </style>
+
+            <div id="gr_custom_widget_1782262178">
+                <div class="gr_custom_container_1782262178">
+                    <h2 class="gr_custom_header_1782262178">
+                        <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/112709167-david-mart-nez?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">David&#39;s bookshelf: read</a>
+                    </h2>
+                    <noscript>
+                        Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with David, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+                    </noscript>
+                </div>
+            </div>
+            <script src="https://www.goodreads.com/review/custom_widget/112709167.David's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=100&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=none&widget_id=1782262178&widget_text_color=000000&widget_title_size=large&widget_width=full" type="text/javascript" charset="utf-8"></script>
         </section>
     </div>
 
     <footer id="main-footer"></footer>
 
     <!-- Load scripts -->
-    <script src="data/books.js"></script>
     <script src="data/contact.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        renderBooks('all-books');
         renderFooter('main-footer');
     </script>
 </body>
