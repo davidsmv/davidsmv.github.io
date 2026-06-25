@@ -29,8 +29,8 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="books.html" style="color: var(--accent-color);">Books</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -212,6 +212,9 @@
                     line-height: 1.6;
                     color: var(--text-color);
                 }
+                .gr_custom_review_1782262178 br {
+                    display: none;
+                }
             </style>
 
             <div id="gr_custom_widget_1782262178">
@@ -225,6 +228,27 @@
                 </div>
             </div>
             <script src="https://www.goodreads.com/review/custom_widget/112709167.David's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=100&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=none&widget_id=1782262178&widget_text_color=000000&widget_title_size=large&widget_width=full" type="text/javascript" charset="utf-8"></script>
+            <script>
+                // Add "Read full review" links to each book entry after widget loads
+                setTimeout(function() {
+                    var containers = document.querySelectorAll('[class^="gr_custom_each_container_"]');
+                    containers.forEach(function(container) {
+                        var titleLink = container.querySelector('[class^="gr_custom_title_"] a');
+                        var review = container.querySelector('[class^="gr_custom_review_"]');
+                        if (titleLink && review && review.textContent.trim().endsWith('...')) {
+                            var link = document.createElement('a');
+                            link.href = titleLink.href;
+                            link.target = '_blank';
+                            link.rel = 'nofollow';
+                            link.textContent = 'Read full review →';
+                            link.style.cssText = 'color:var(--accent-color); text-decoration:none; font-weight:bold;';
+                            link.onmouseover = function() { this.style.textDecoration = 'underline'; };
+                            link.onmouseout = function() { this.style.textDecoration = 'none'; };
+                            review.appendChild(link);
+                        }
+                    });
+                }, 2000);
+            </script>
         </section>
     </div>
 
