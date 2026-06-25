@@ -231,6 +231,10 @@
             <script>
                 // Add "Read full review" links to each book entry after widget loads
                 setTimeout(function() {
+                    // Open all widget links in new tab
+                    var allLinks = document.querySelectorAll('[id^="gr_custom_widget_"] a, [id^="gr_challenge_"] a');
+                    allLinks.forEach(function(a) { a.target = '_blank'; });
+
                     var containers = document.querySelectorAll('[class^="gr_custom_each_container_"]');
                     containers.forEach(function(container) {
                         var titleLink = container.querySelector('[class^="gr_custom_title_"] a');

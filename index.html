@@ -76,6 +76,7 @@
         <!-- Books Section (Goodreads) -->
         <section id="books">
             <h2>Recent Read</h2>
+            <p style="text-align: center; margin-bottom: 20px;">I believe in continuous learning. Here are some of the books I've read and my thoughts on them.</p>
 
             <!-- Reading Challenge Widget -->
             <style>
@@ -253,6 +254,31 @@
                 </div>
             </div>
             <script src="https://www.goodreads.com/review/custom_widget/112709167.David's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=2&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=0&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=none&widget_id=1782262179&widget_text_color=000000&widget_title_size=large&widget_width=full" type="text/javascript" charset="utf-8"></script>
+            <script>
+                // Add "Read full review" links to each book entry after widget loads
+                setTimeout(function() {
+                    // Open all widget links in new tab
+                    var allLinks = document.querySelectorAll('[id^="gr_custom_widget_"] a, [id^="gr_challenge_"] a');
+                    allLinks.forEach(function(a) { a.target = '_blank'; });
+
+                    var containers = document.querySelectorAll('[class^="gr_custom_each_container_"]');
+                    containers.forEach(function(container) {
+                        var titleLink = container.querySelector('[class^="gr_custom_title_"] a');
+                        var review = container.querySelector('[class^="gr_custom_review_"]');
+                        if (titleLink && review && review.textContent.trim().endsWith('...')) {
+                            var link = document.createElement('a');
+                            link.href = titleLink.href;
+                            link.target = '_blank';
+                            link.rel = 'nofollow';
+                            link.textContent = 'Read full review \u2192';
+                            link.style.cssText = 'color:var(--accent-color); text-decoration:none; font-weight:bold;';
+                            link.onmouseover = function() { this.style.textDecoration = 'underline'; };
+                            link.onmouseout = function() { this.style.textDecoration = 'none'; };
+                            review.appendChild(link);
+                        }
+                    });
+                }, 2000);
+            </script>
             <div style="text-align: center; margin-top: 2rem;">
                 <a href="books.html" style="background-color: var(--primary-color); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">See Full Reading List</a>
             </div>
